@@ -1,12 +1,19 @@
 package example.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * Created by 李恒名 on 2016/10/13.
  */
+@ApiModel("User(用户模型)")
 public class User {
 
+    @ApiModelProperty("ID")
     private Long id;
+    @ApiModelProperty("用户名")
     private String username;
+    @ApiModelProperty("年龄")
     private Integer age;
 
     public Long getId() {
@@ -33,7 +40,8 @@ public class User {
         this.age = age;
     }
 
-    public User(){}
+    public User() {
+    }
 
     public User(Long id, String username, Integer age) {
         this.id = id;
